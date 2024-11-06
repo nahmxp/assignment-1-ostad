@@ -1,0 +1,669 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 1em 2em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    height: 30px; /* Adjust this value as needed */
+    width: auto;  /* Keeps the image’s aspect ratio */
+    display: block;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #6a3ab2; /* Purple on hover */
+}
+
+.contact-btn {
+    padding: 0.5em 1.5em;
+    border: 2px solid #6a3ab2; /* Purple border */
+    color: #6a3ab2;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #6a3ab2;
+    color: #ffffff;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    background-color: #f5f9ff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    gap: 2em;
+}
+
+.hero-text {
+    font-family: Roboto;
+    font-size: SemiBold;
+    max-width: 600px;
+}
+
+.hero-text p:first-of-type {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.hero-text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #333;
+    margin: 0.5em 0;
+}
+
+.highlight {
+    color: #5E3BEE; /* Purple color */
+}
+
+.hero-text p:nth-of-type(2) {
+    color: #666;
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    padding: 0.75em 1.5em;
+    background-color: #5E3BEE; /* Purple background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: #553399; /* Darker purple for hover */
+}
+
+.hero-image img {
+    width: 150%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Expertise Section */
+
+/* Expertise Section */
+
+.expertise {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.expertise-heading p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.expertise-heading h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.expertise-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expertise-card {
+    position: relative;
+    flex: 1 1 calc(25% - 20px);
+    max-width: 280px;
+    background-color: #f5faff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.expertise-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #6c63ff; /* Adjust this color to your desired hover underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+}
+
+.expertise-card:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.expertise-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.expertise-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.expertise-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+}
+
+/* About Section */
+#about {
+    font-family: Roboto;
+    padding: 3em 1em;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    gap: 2em;
+    padding: 2em;
+}
+
+.about-image img {
+    width: 400px; /* Adjust as needed */
+    border-radius: 8px;
+    /* background: #e0c8f2; Background color for purple brushstroke effect */
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adding purple brushstroke behind image */
+.about-image {
+    position: relative;
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    /* background: #e0c8f2; Purple background */
+    z-index: 0;
+    border-radius: 50%; /* Optional for brushstroke effect */
+}
+
+.about-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.about-content h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.about-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Portfolio Section */
+#portfolio {
+    font-family: Roboto;
+    padding: 3em 1em;
+    background-color: #ffffff;
+    text-align: right;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    max-width: 1000px;
+    margin: 0 auto 2em auto;
+}
+
+.portfolio-header p {
+    align-items: right;
+    font-size: 1.2em;
+    color: #888;
+}
+
+.portfolio-header h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.dribbble-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #ff4684; /* Dribbble pink color */
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dribbble-button:hover {
+    background-color: #e6396e; /* Darker shade for hover effect */
+}
+
+.dribbble-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Optional: Dribbble icon */
+.dribbble-button::before {
+    font-family: "Roboto"; /* Make sure to include Font Awesome in your project */
+    font-weight: 900;
+    margin-right: 0px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background: #f9f9f9;
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.portfolio-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.dribbble-link {
+    color: #015326;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Section Styles */
+#testimonials {
+    font-family: Roboto;
+    padding: 40px;
+    padding-left: 25%;
+    background-color: #f0f4f8;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.section-title p {
+    color: #4a4a4a;
+    font-size: 14px;
+    margin: 0;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    margin: 5px 0 20px;
+    color: #333;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    font-family: Roboto;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Testimonial Item */
+.testimonial-item {
+    background-color: #f0f4f8;
+    border: 1px solid #078d02;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: #027a16; /* Gold color for stars */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.author-company {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* Contact Section Styles */
+#contact {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.contact-title p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.contact-title h2 {
+    font-size: 28px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.contact-title p:nth-of-type(2) {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #a270f6;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-width: 700px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+/* Button Style */
+button {
+    align-self: center;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5E3BEE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b1596;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f0f4f8;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #6a0dad;
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #6a0dad;
+}
+
+/* Divider Line */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom span {
+    color: red; /* Color for heart icon */
+}
+
+.footer-legal {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-legal a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #6a0dad;
+}
+
+

@@ -1,0 +1,104 @@
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    /* Expertise Section */
+    .expertise-cards {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .expertise-card {
+        max-width: 100%;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+
+    /* Portfolio Section */
+    .portfolio-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    /* Testimonials Section */
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-item {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 2em 1em;
+    }
+
+    /* Footer */
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav,
+    .footer-social {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
